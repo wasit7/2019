@@ -24,3 +24,5 @@ app = web.Application()
 app.router.add_get('/counter/{name}', handle)
 
 web.run_app(app,port=8082)
+
+#go to http://localhost:8082/counter/einstien
