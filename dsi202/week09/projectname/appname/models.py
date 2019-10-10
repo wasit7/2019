@@ -9,7 +9,9 @@ class Customer(models.Model):
 class Car(models.Model):
     brand = models.CharField(max_length=30)
     model = models.CharField(max_length=30)
-    prize = models.DecimalField(max_digits=11, decimal_places=2)
+    price = models.DecimalField(max_digits=11, decimal_places=2)
+    def __str__(self):
+        return "%s %s"%(self.brand,self.model)
 
 class Rent(models.Model):
     customer = models.ForeignKey('Customer', on_delete=models.CASCADE)

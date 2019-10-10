@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Customer, Car, Rent
 
-# Register your models here.
+class CarAdmin(admin.ModelAdmin):
+    fields = ('brand', 'model', 'price')
+admin.site.register(Car, CarAdmin)
